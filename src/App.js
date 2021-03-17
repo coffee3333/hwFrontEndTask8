@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import addButton from './assets/img/plus.svg';
+import ToDoList from './to-do/ToDoList/ToDoList';
+
+
+
 
 function App() {
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-div'>
+      <div className="nav-bar">
+        <h3 className="nav-bar__title">Docket</h3>
+        <button className="nav-bar__add"><img src={addButton} alt="" /></button>
+      </div>
+      <div className="todos-wrapper">
+        <input className="todos__search-field" placeholder = "Search..."/>
+			  <h1 className="todos__main-title">Notes</h1>
+        <ToDoList />
+      </div>
     </div>
+
   );
 }
 
