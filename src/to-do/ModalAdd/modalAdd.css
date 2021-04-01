@@ -1,0 +1,26 @@
+.nav-bar__add{
+	background: url(../../assets/img/plus.svg);
+	background-repeat: no-repeat;
+	background-size: 25px 25px;
+	background-position: center;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+}
+
+.modal__add-form{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+    margin: 0 20px;
+}
+
+.modal__label-title{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.modal__label-desc{
+    margin-bottom: 10px;
+    font-size: 20px;
+}

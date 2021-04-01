@@ -1,0 +1,16 @@
+.modal__edit-form{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+    margin: 0 20px;
+}
+
+.modal__label-title{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.modal__label-desc{
+    margin-bottom: 10px;
+    font-size: 20px;
+}

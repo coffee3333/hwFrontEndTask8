@@ -1,16 +1,31 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './toDoItem.css'
+import PropTypes  from 'prop-types'
+import Context from '../../context'
+import ModalEdit from '../ModalEdit/ModalEdit'
 
-export default function ToDoItem() {
+
+
+function ToDoItem({ todo, index, editTodo }) {
+    const {removeToDo} = useContext(Context)
+
     return (
         <div className="todos__task">
-            <h3 className="todos__task-title">Lorem ipsum dolor sit amet.</h3>
-            <p className="todos__task-description">1Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora et assumenda in, laboriosam eum fuga enim sit, minima nihil voluptate.</p>
+            <h3 className="todos__task-title">{todo.title}</h3>
+            <p className="todos__task-description">{todo.desc}</p>
             <div className="todos__footer">
-                <p className = "todos__date">23.02.2021</p>
-                <a className="todos__edit-btn"></a>
-                <a className="todos__close-btn"></a>
+                <p className = "todos__date">{todo.date}</p>
+                <ModalEdit todo = {todo} editTodo = {editTodo} />
+                <button className="todos__close-btn" onClick = {() => removeToDo(todo.id)}/>
             </div>
         </div>	
     )
 }
+
+ToDoItem.propTypes = {
+    todo: PropTypes.object.isRequired,
+    index: PropTypes.number
+}
+
+
+export default ToDoItem
